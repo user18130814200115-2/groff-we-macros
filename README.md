@@ -16,13 +16,15 @@ Heading title in size 18-size
 ```
 .tt "title" "subtitle"
 ```
-///centered  
+<p align="center">  
 Title  
 Subtitle  
+</p>
 
 ```
 .ta "author" "sub-author"
 ```
-//centered  
+<p align="center">
 Author  
 sub-author  
+</p>
