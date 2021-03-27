@@ -10,19 +10,19 @@ like this
 ```
 .uh "heading title" "size "top margin"
 ```
-"top margin"
+"top margin"  
 Heading title in size 18-size
 
 ```
 .tt "title" "subtitle"
 ```
-///centered
-Title
-Subtitle
+///centered  
+Title  
+Subtitle  
 
 ```
 .ta "author" "sub-author"
 ```
-//centered
-Author
-sub-author
+//centered  
+Author  
+sub-author  
