@@ -17,7 +17,8 @@ Heading title in size 18-size
 .tt "title" "subtitle"
 ```
 <p align="center">  
-Title  
+Title
+  <br>
 Subtitle  
 </p>
 
@@ -26,5 +27,6 @@ Subtitle
 ```
 <p align="center">
 Author  
+  <br>
 sub-author  
 </p>
