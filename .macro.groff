@@ -1,0 +1,48 @@
+.R1
+sort
+label "(A.n|Q) ', ' (D.y|D)"
+bracket-label " (" ) "; "
+database /home/user/Documents/.bibliography.groff
+.R2
+
+.hy 0
+
+.de bu
+. pp
+\\$1\[bu]
+..
+
+.de uh
+. sp \\$3
+. ps 18
+. ps -\\$2
+\\$1
+.ps 10
+..
+
+.de tt
+.tp
+.ps 25
+.(c
+\\$1
+.)c
+.sp
+.ps 16
+.(c
+\\$2
+.)c
+.ps 13
+.sp 2
+..
+
+.de ta
+.(c
+\\$1
+.)c
+.sp 0.1
+.ps 12
+.(c
+\\$2
+.)c
+.sp
+..
