@@ -1,32 +1,99 @@
 # groff-me-macros
-My groff macro file which is appended at the beginning of each of my groff documents, made for use with groff-me
+## Differences from groff-me
+### Bullet points
+Bulleted lists can be made with a call to
+```
+.bu
+```
+this command takes two agruments
+```
+.bu [CONTENTS] [DEPTH]
+```
+for instance, the following groff input
+```
+.bu "One"
+.bu "Two"
+.bu "Two A" 1
+.bu "Two A Alpha" 2
+```
+produces the following output
 
+- One
+- Two
+  - Two A
+    - Two A Alpha 
+### Headings
+A heading can be started with a call to
 ```
-.bu "any amont of spaces"  
-like this
+.uh
 ```
-  - like this
+this command takes two arguments
+```
+.bu [CONTENTS] [DEPTH]
+```
+for instance, the following groff input
+```
+.uh "One"
+.uh "Two"
+.uh "Two A"
+.uh "Two A Alpha"
+```
+produces the following output
 
-```
-.uh "heading title" "size "top margin"
-```
-"top margin"  
-Heading title in size 18-size
+# One
+# Two
+## Two A
+### Two A Alpha
 
+### Title Page
+A title page can easily be created with two calls
 ```
-.tt "title" "subtitle"
+.tt
+.ta
 ```
-<p align="center">  
-Title
-  <br>
-Subtitle  
-</p>
+both of these calls take two arguments
+```
+.tt "Title" "Subtitle"
+.ta "Author" "Subtext"
+```
+The output will look like this
 
+![example of .tt and .ta calls](title-example.png)
+
+### Intext indents
+The `.n` call can be used to make a tabbed indent at the start of the new line. This is useful for instance in writing dialogs.
 ```
-.ta "author" "sub-author"
+John was astounded
+.q "That is outrageous Mary!"
+.n
+.q "Not as outrageous as you may think"
+.n
+.q "Well I don't think we should go trough with it, think of the dangers!"
 ```
-<p align="center">
-Author  
-  <br>
-sub-author  
-</p>
+produces
+```
+John was astounded "That is outrageous Mary!"  
+  "Not as outrageous as you may think"  
+  "Well I don't think we should go trough with it, think of the dangers!"  
+```
+### References
+By default, when using refer with groff, the bibliography section at the end of a paper is called "References", written out in bold text.
+In the we macro set, the heading is set as a chapter name using the call
+```
+.+c "References"
+```
+meaning that it will conform to the heading structure you set for chapters.
+
+Furthermore, the call
+```
+.rh
+```
+can change the default title
+```
+.rh "Notes and Bibliography"
+```
+Will replace the "References" heading with "Notes and Bibliography"
+
+## Installation
+Download both `we.tmac` and `refer-we.tmac` and install them to a groff accessible macro path such as `/usr/share/groff/current/tmac`.
+The call groff with the `-mwe` option.
