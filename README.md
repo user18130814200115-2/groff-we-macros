@@ -97,3 +97,6 @@ Will replace the "References" heading with "Notes and Bibliography"
 ## Installation
 Download both `we.tmac` and `refer-we.tmac` and install them to a groff accessible macro path such as `/usr/share/groff/current/tmac`.
 The call groff with the `-mwe` option.
+
+## Credit
+Credit goes to to the University of California at Berkeley, Eric P. Allman and James Clark for making the original groff-me macros.
