@@ -94,6 +94,8 @@ can change the default title
 ```
 Will replace the "References" heading with "Notes and Bibliography"
 
+Lastly, the fontsize of the bibliography section has been increased to 12 to be consistent with the other `.+c` sections in your documents.
+
 ## Installation
 Download both `we.tmac` and `refer-we.tmac` and install them to a groff accessible macro path such as `/usr/share/groff/current/tmac`.
 The call groff with the `-mwe` option.
