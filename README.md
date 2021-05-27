@@ -98,11 +98,12 @@ Lastly, the fontsize of the bibliography section has been increased to 12 to be 
 
 ### Bold and Italics
 The calls `.b .i .r .rb .bi` now all accept a third argument. This third argument will be prepended to the text in the previous font.
+
 Example
 ```
 .b "This in bold" ) (
 ```
-produces
+produces  
 (**This in bold**)
 
 ## Installation
