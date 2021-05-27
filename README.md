@@ -96,6 +96,15 @@ Will replace the "References" heading with "Notes and Bibliography"
 
 Lastly, the fontsize of the bibliography section has been increased to 12 to be consistent with the other `.+c` sections in your documents.
 
+### Bold and Italics
+The calls `.b .i .r .rb .bi` now all accept a third argument. This third argument will be prepended to the text in the previous font.
+Example
+```
+.b "This in bold" ) (
+```
+produces
+(**This in bold**)
+
 ## Installation
 Download both `we.tmac` and `refer-we.tmac` and install them to a groff accessible macro path such as `/usr/share/groff/current/tmac`.
 The call groff with the `-mwe` option.
