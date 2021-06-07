@@ -729,10 +729,20 @@
 ..
 .de uh
 . sp \\$3
+. nr oldsize \\n[.s]
 . nr fontsize (18-(\\$2*2))
 . ps \\n[fontsize]
 . b \\$1
-. ps 10
+. ps \\n[oldsize]
+..
+.de cuh
+. nr oldsize \\n[.s]
+. sp \\$3
+. nr fontsize (18-(\\$2*2))
+. ps \\n[fontsize]
+. ce 1
+. b \\$1
+. ps \\n[oldsize]
 ..
 .de $p
 .if (\\n(si>0)&(\\n(.$>2) \
